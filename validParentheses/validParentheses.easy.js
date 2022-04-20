@@ -23,26 +23,29 @@ Example 3:
 Input: s = "(]"
 Output: false
  */
+
+const isOpenBracket = (bracketChar) =>
+    bracketChar === "(" || bracketChar === "{" || bracketChar === "[";
+
+const isClosingBracket = (bracketChar) =>
+    bracketChar === ")" || bracketChar === "}" || bracketChar === "]";
+
+const isSameType = (openingBracket, closingBracket) =>
+    (openingBracket === "(" && closingBracket === ")") ||
+    (openingBracket === "[" && closingBracket === "]") ||
+    (openingBracket === "{" && closingBracket === "}");
+
 const isValid = function (s) {
     const stack = [];
     for (let i = 0; i < s.length; i++) {
-        if (s[i] === "(" || s[i] === "{" || s[i] === "[") {
+        if (isOpenBracket(s[i])) {
             stack.push(s[i]);
-        } else if (s[i] === ")" && stack[stack.length - 1] === "(") {
-            stack.pop();
-        } else if (s[i] === "}" && stack[stack.length - 1] === "{") {
-            stack.pop();
-        } else if (s[i] === "]" && stack[stack.length - 1] === "[") {
-            stack.pop();
-        } else {
-            return false;
+        } else if (isClosingBracket(s[i])) {
+            const openingBracket = stack.pop();
+            if (!isSameType(openingBracket, s[i])) return false;
         }
     }
-    if (stack.length === 0) {
-        return true;
-    } else {
-        return false;
-    }
+    return stack.length === 0;
 };
 
 console.log(isValid("()"));
