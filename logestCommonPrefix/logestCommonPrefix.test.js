@@ -12,3 +12,10 @@ test("Example 2", () => {
 test("Example 3", () => {
     expect(longestCommonPrefix(["flow", "flower", "flight"])).toBe("fl");
 });
+
+test("Example 4", () => {
+    expect(longestCommonPrefix(["flow", "flower", ""])).toBe("");
+});
+test("Example 5", () => {
+    expect(longestCommonPrefix(["", "flower", "flight"])).toBe("");
+});

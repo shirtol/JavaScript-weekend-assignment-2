@@ -25,12 +25,13 @@ const longestCommonPrefix = function (strs) {
             }
             if (i === comparableStr.length - 1) break;
         }
-        comparableStr = comparableStr.slice(0, str.length - 1);
+        comparableStr = comparableStr.slice(0, str.length);
     }
     return comparableStr;
 };
 
 console.log(longestCommonPrefix(["flower", "flow", "flight"]));
 console.log(longestCommonPrefix(["dog", "racecar", "car"]));
+console.log(longestCommonPrefix(["flower", "flow", ""]));
 
 module.exports = longestCommonPrefix;
