@@ -51,3 +51,5 @@ console.log(isValid("(]"));
 console.log(isValid("}]"));
 console.log(isValid("((((("));
 console.log(isValid("[()]{}"));
+
+module.exports = isValid;
