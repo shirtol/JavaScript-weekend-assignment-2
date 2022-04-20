@@ -23,6 +23,7 @@ const longestCommonPrefix = function (strs) {
             if (str[i] !== comparableStr[i]) {
                 comparableStr = comparableStr.slice(0, i);
             }
+            if (i === comparableStr.length - 1) break;
         }
         comparableStr = comparableStr.slice(0, str.length - 1);
     }
