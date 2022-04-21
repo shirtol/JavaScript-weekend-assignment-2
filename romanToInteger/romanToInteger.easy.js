@@ -40,4 +40,41 @@ Output: 1994
 Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
  */
 
-const romanToInt = function (s) {};
+const romanObj = {
+    I: 1,
+    V: 5,
+    X: 10,
+    L: 50,
+    C: 100,
+    D: 500,
+    M: 1000,
+};
+
+const specialCasesObj = {
+    I: ["V", "X"],
+    X: ["L", "C"],
+    C: ["D", "M"],
+};
+
+const checkSpecialCases = (firstChar, secondChar) =>
+    firstChar in specialCasesObj &&
+    specialCasesObj[firstChar].includes(secondChar);
+
+const romanToInt = function (s) {
+    let resNum = 0;
+
+    for (let i = 0; i < s.length; i++) {
+        if (checkSpecialCases(s[i], s[i + 1])) {
+            resNum += romanObj[s[i + 1]] - romanObj[s[i]];
+            i++;
+        } else {
+            resNum += romanObj[s[i]];
+        }
+    }
+    return resNum;
+};
+
+console.log(romanToInt("III"));
+console.log(romanToInt("LVIII"));
+console.log(romanToInt("MCMXCIV"));
+console.log(romanToInt("MMMDCCXXIV"));
