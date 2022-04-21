@@ -31,4 +31,33 @@ Constraints:
 haystack and needle consist of only lowercase English characters.
  */
 
-const strStr = function (haystack, needle) {};
+const strStr = function (haystack, needle) {
+    if (!needle) return 0;
+    for (let i = 0; i < haystack.length; i++) {
+        if (haystack[i] === needle[0]) {
+            let isSame = true;
+            for (let j = 1; j < needle.length; j++) {
+                if (haystack[i + j] !== needle[j]) {
+                    isSame = false;
+                }
+            }
+            if (isSame) return i;
+        }
+    }
+
+    return -1;
+};
+
+const strStrSimple = function (haystack, needle) {
+    if (!needle) return 0;
+    return haystack.indexOf(needle);
+};
+
+console.log(strStr("hello", "ll"));
+console.log(strStr("aaaaa", "bba"));
+console.log(strStr("aaaaa", ""));
+console.log(strStr("lali", "li"));
+
+// console.log(strStrSimple("hello", "ll"));
+// console.log(strStrSimple("aaaaa", "bba"));
+// console.log(strStrSimple("aaaaa", ""));
