@@ -26,4 +26,20 @@ Input: nums = [3,3], target = 6
 Output: [0,1]}
  */
 
-const twoSum = function (nums, target) {};
+const twoSum = function (nums, target) {
+    const helperObj = {};
+    for (let i = 0; i < nums.length; i++) {
+        const key = target - nums[i];
+        if (nums[i] in helperObj) {
+            return [helperObj[nums[i]], i];
+        }
+        helperObj[key] = i;
+    }
+};
+
+console.log(Array.isArray(twoSum([3, 2, 4], 6)));
+console.log(twoSum([2, 7, 11, 15], 9));
+console.log(twoSum([3, 2, 4], 6));
+console.log(twoSum([3, 3], 6));
+
+module.exports = twoSum;
