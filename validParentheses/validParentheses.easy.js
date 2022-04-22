@@ -35,6 +35,7 @@ const isSameType = (openingBracket, closingBracket) =>
     (openingBracket === "[" && closingBracket === "]") ||
     (openingBracket === "{" && closingBracket === "}");
 
+// I'm using an array as stack, in order to use the functionality of push and pop.
 const isValid = function (s) {
     const stack = [];
     for (let i = 0; i < s.length; i++) {
