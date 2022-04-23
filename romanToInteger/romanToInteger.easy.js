@@ -74,9 +74,4 @@ const romanToInt = function (s) {
     return resNum;
 };
 
-console.log(romanToInt("III"));
-console.log(romanToInt("LVIII"));
-console.log(romanToInt("MCMXCIV"));
-console.log(romanToInt("MMMDCCXXIV"));
-
 module.exports = romanToInt;

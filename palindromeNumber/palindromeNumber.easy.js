@@ -36,9 +36,4 @@ const palindromeNumber = function (x) {
     return true;
 };
 
-console.log(palindromeNumber(121));
-console.log(palindromeNumber(-121));
-console.log(palindromeNumber(10));
-console.log(palindromeNumber(11));
-
 module.exports = palindromeNumber;

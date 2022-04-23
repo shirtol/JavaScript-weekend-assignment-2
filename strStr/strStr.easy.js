@@ -53,13 +53,4 @@ const strStrSimple = function (haystack, needle) {
     return haystack.indexOf(needle);
 };
 
-console.log(strStr("hello", "ll"));
-console.log(strStr("aaaaa", "bba"));
-console.log(strStr("aaaaa", ""));
-console.log(strStr("lali", "li"));
-
-// console.log(strStrSimple("hello", "ll"));
-// console.log(strStrSimple("aaaaa", "bba"));
-// console.log(strStrSimple("aaaaa", ""));
-
 module.exports = strStr;

@@ -35,7 +35,7 @@ describe("Random tests", () => {
             randomNumInRange(randomStart, haystack.length)
         );
 
-        return [needle, needle === "" ? 0 : haystack.indexOf(needle)];
+        return [needle, needle === "" ? 0 : haystack.indexOf(needle)]; //We return the index of needle in haystack to assure that we get the index of the first occurrence.
     };
     test("Testing on random strings 5 times.", () => {
         for (let i = 0; i < 5; i++) {
