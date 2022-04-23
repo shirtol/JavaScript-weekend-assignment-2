@@ -1,19 +1,36 @@
 # Algo And Testing
 
-## Clone Repo Instructions
+## Table Of Content:
 
-- **git clone https://(address)**
-- after clone please **npm install** this will install all what that this project is need automatically
-- **Note:** for run the test you need to run the command **npm run test**
+[Ex1: Longest Common Prefix](./logestCommonPrefix/longestCommonPrefix.easy.js)
 
-## Welcome We Happy To See You
+[Ex2: Palindrome Number](./palindromeNumber/palindromeNumber.easy.js)
 
-please in this repo you will find Algorithms that you will need to build functions from screech <br>
-each file hold the instructions of the algorithms and the testing
+[Ex3: Roman To Integer](./romanToInteger/romanToInteger.easy.js)
 
-### Testing
+[Ex4: Search Insert Position](./searchInsertPosition/searchInsertPosition.easy.js)
 
-- **Each example in the instructions is a Test**
-- **Each description in the instructions is what the Algo should be**
-# JavaScript-weekend-assignment-2
-# JavaScript-weekend-assignment-2
+[Ex5: StrStr](./strStr/strStr.easy.js)
+
+[Ex6: Two sum](./twoSum/twoSum.easy.js)
+
+[Ex7: Valid Parentheses](./validParentheses/validParentheses.easy.js)
+
+## Description
+
+This task includes exercises in JS.
+
+The purpose of the assignment was implementing basic algorithms and testing.
+
+To do so I had to use data structures such as stacks and objects.
+
+During this task I also implemented random testing.
+
+## Main Technologies:
+
+-   JS
+
+### Testing:
+
+-   jest
+-   VS test explorer
